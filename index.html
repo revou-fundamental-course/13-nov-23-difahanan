@@ -3,30 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="assets/image/beach.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="icon" href="assets/images/beach.jpg">
     <link rel="stylesheet" href="css/style.css">
     <title>TRAVEL WEBSITE</title>
 </head>
 <body>
 
     <header>
-        <div id="logo">
-            <h1>moqups</h1>
-        </div>
-
+        <a href=#HOME>
+            <h1 data-text="DIFF TRAVEL" id="logo">diff travel</span></h1>
+        </a>
         <nav>
-            <a href="HOME" id="home">home</a>
-            <a href="OUR-PACKAGE" id="our-package">our package</a>
-            <a href="CALL-US" id="call-us">call us</a>
+            <a href="#HOME" id="home">home</a>
+            <a href="#OUR-PACKAGE" id="our-package">our package</a>
+            <a href="#CALL-US" id="call-us">call us</a>
         </nav>
     </header>
 
     <main>
-        <section id="banner-auto-slide">
-            <h2 class="trusted">your trusted travel agent's</h2>
-            <p class="happines">your happines is our happines</p>
+        <section id="banner-auto-slide" >
+            <div id="HOME" class="main-section animate__animated animate__zoomIn">
+                <img id="image-slider" class="image-slider">
+                <h1 class="trusted">your trusted travel agent's</h1>
+                <h5 class="happines">your happines is our happines</h5>
+            </div>
+        </section>
+
+        <section>
+            <div id="images-and-form-child">
+            <div>
+                <img id="images-slider" class="images-slider"><br><br>
+                <p class="caption">"vacation is fun with my travel agent"</p><br>
+                <div class="container-parent">
+                    <div class="container-child">
+                        <img class="user-img" src="assets/images/user.jpg">
+                        <div class="name-user-and-work">
+                            <p class="name-user">xorn albert</p>
+                            <p class="work">freelancer, 25</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <form id="contact-us">
+                <h4>contact us</h4>
+                <h5>sales will contact you 1x24 hours after we receive the data</h5>
+                <br><br>
+                <p>your name :</p>
+                <label></label>
+                <input type="text" placeholder="first and last name" id="name-input">
+                <p class="alert" id="error-name"></p>
+                <br>
+                <p>email address :</p>
+                <label></label>
+                <input type="email" placeholder="example@gmail.com" id="email-input">
+                <p class="alert" id="error-email"></p>
+                <br>
+                <p>what are you interested in ?</p>
+                <select name="option" id="option">
+                    <option value="option1">select option</option>
+                    <option value="option2">visiting a very beautiful beach</option>
+                    <option value="option3">climbing to the top of the mountain</option>
+                    <option value="option4">going to a traditional tourist spot</option>
+                    <option value="option5">vacationing with big family</option>
+                    <option value="option6">wanting to travel the world alone</option>
+                </select>
+                <p class="alert" id="error-option"></p>
+                <br>
+                <button type="submit" id="buttons">send</button>
+            </form>
+        </div>
+        </section>
+
+        <section id="information">
+            <h1>BENEFITS YOU WILL GET BY USING DIFF TRAVEL</h1>
+            <div>
+                <h2>⭐ PRICE MUCH CHEAPER THAN OTHER TRAVEL AND MANY PROMOTION</h2><br>
+                    <img src="assets/images/promotion-one.jpg">
+                    <img src="assets/images/promotion-two.jpg">
+                    <img src="assets/images/promotion-three.jpg">
+            </div><br>
+            <div>
+                <h2>⭐ WE PRIORITIZE COMFORT WITH FIVE-STAR QUALITY</h2><br>
+                    <img src="assets/images/five-star-one.jpg">
+                    <img src="assets/images/five-star-two.jpg">
+                    <img src="assets/images/five-star-three.jpg">
+            </div><br>
+            <div>
+                <h2>⭐ SAFE AND CONVENIENT PAYMENT</h2><br>
+                    <img src="assets/images/payment-one.jpg">
+                    <img src="assets/images/payment-two.jpg">
+                    <img src="assets/images/payment-three.jpg">
+            </div><br>
+            <div>
+                <h2>⭐ PROFESSIONAL PHOTOGRAPHER ALSO AVAILABLE IF YOU NEED</h2><br>
+                    <img src="assets/images/profesional-fotographer-one.jpg">
+                    <img src="assets/images/profesional-fotographer-two.jpg">
+                    <img src="assets/images/profesional-fotographer-three.jpg">
+            </div><br>
+            <div>
+                <h2>⭐ MANY TRANSPORTATION OPTIONS THERE ARE AIR, SEA AND LAND</h2><br>
+                    <img src="assets/images/car.jpg">
+                    <img src="assets/images/plane.jpg">
+                    <img src="assets/images/ship.jpg">
+            </div><br>
+        </section>
+
+        <section id="our-packages">
+            <div id="OUR-PACKAGE"></div>
+            <h1>our package</h1>
+            <div class="title-top">
+                <h2>🔰 bali</h2>
+                <h2>🔰 japan</h2>
+                <h2>🔰 singapore</h2>
+            </div>
+            <div class="caption-top">
+                <h2>visit cultural heritage and culinary highlights.</h2>
+                <h2>visit cultural heritage and culinary highlights.</h2>
+                <h2>visit cultural heritage and culinary highlights.</h2>
+            </div>
+            <div class="title-bottom">
+                <h2>🔰 bandung</h2>
+                <h2>🔰 surabaya</h2>
+                <h2>🔰 dubai</h2>
+            </div>
+            <div class="caption-bottom">
+                <h2>visit cultural heritage and culinary highlights.</h2>
+                <h2>visit cultural heritage and culinary highlights.</h2>
+                <h2>visit cultural heritage and culinary highlights.</h2>
+            </div>
+        </section>
+
+        <section id="closing">
+            <div id="CALL-US"></div>
+            <h1>don't hesitate to book at diff travel.</h1><br>
+            <h1>don't let you miss out on an exciting  experience with us.</h1><br>
+            <button class="button">call to action</button>
         </section>
     </main>
+
+    <footer>
+        <h1>DIFF TRAVEL</h1><br>
+        <div>
+            <h3>terms of service</h3>&nbsp;&nbsp;
+            <h3>privacy policy</h3>
+        </div><br>
+        <div>
+            <h3>© 2023</h3>&nbsp;&nbsp;
+            <a href="https://www.linkedin.com/in/difa-hanan-746b5125a/">difa hanan</a>
+        </div>
+    </footer>
 
     <script src="js/script.js"></script>
 

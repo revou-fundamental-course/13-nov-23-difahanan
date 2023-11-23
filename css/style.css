@@ -1,17 +1,80 @@
-*, body {
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+* {
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
+    ::-webkit-scrollbar {
+        width: 0.5em;
+    }
+    ::-webkit-scrollbar-track {
+        background: black;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: white;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: yellow;
+    }
+    cursor: url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='24px' height='24px' viewBox='0 0 512 512' style='enable-background:new 0 0 512.011 512.011;' xml:space='preserve'%3E %3Cpath fill='DeepSkyBlue' d='M434.215,344.467L92.881,3.134c-4.16-4.171-10.914-4.179-15.085-0.019  c-2.011,2.006-3.139,4.731-3.134,7.571v490.667c0.003,4.382,2.685,8.316,6.763,9.92c4.081,1.603,8.727,0.545,11.712-2.667  l135.509-145.92h198.016c5.891,0.011,10.675-4.757,10.686-10.648C437.353,349.198,436.226,346.473,434.215,344.467z'/%3E %3C/svg%3E"),
+    pointer;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Bebas Neue', sans-serif;
 }
 
 header {
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    position: sticky;
     display: flex;
-    justify-content: space-between;
     padding: 1em;
+    box-shadow: 1px 5px 5px blue;
+    justify-content: space-between;
+    background-color: black;
+}
+
+a {
+    color: black;
+    text-decoration: none;
 }
 
 #logo {
-    color: gold;
-    border: 1px solid pink;
+    color: black;
+    cursor: pointer;
+    position: relative;
+    letter-spacing: 3px;
+    font-family: 'Lobster', sans-serif;
+}
+
+#logo:hover {
+    transform: scale(1.1);
+}
+
+#logo:before {
+    color: white;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    content: attr(data-text);
+    border-right: 4px solid white;
+    animation: animate 8s linear infinite;
+    filter: drop-shadow(0 0 20px white) drop-shadow(0 0 50px white);
+}
+
+@keyframes animate {
+    0%, 10%, 100% {
+        width: 0;
+    }
+    70%, 90% {
+        width: 140%;
+    }
 }
 
 nav {
@@ -19,41 +82,361 @@ nav {
     justify-content: end;
 }
 
-#home {
-    color: red;
-    padding: 0.5em;
-    width: 4.5em;
+#home, #our-package, #call-us {
+    width: 100px;
+    padding: 10px;
+    color: black;
+    cursor: pointer;
+    border: 1px solid;
     text-align: center;
-    border: 1px solid pink;
+    border-radius: 3px;
+    text-decoration: none;
+    justify-content: center;
+    box-shadow: black 0px 8px;
+    background-color: #ebeced;
 }
 
-#our-package {
-    color: green;
-    padding: 0.5em;
-    border: 1px solid pink;
-}
-
-#call-us {
-    color: blue;
-    padding: 0.5em;
-    width: 4.5em;
-    text-align: center;
-    border: 1px solid pink;
+#home:hover, #our-package:hover, #call-us:hover {
+    color: white;
+    transition: 0.4s;
+    transform: scale(1.1);
+    border-radius: 3px;
+    box-shadow: 0px 5px;
+    background-color: #292F33;
 }
 
 #banner-auto-slide {
     color: white;
-    height: 90.8vh;
-    background-color: gray;
+    height: 90vh;
+    background-color: blue;
+}
+
+.image-slider {
+    height: 91vh;
+    width: 1358px;
 }
 
 .trusted {
+    cursor: text;
     display: flex;
-    margin-bottom: 2em;
+    font-size: 2em;
+    margin-top: -13em;
+    letter-spacing: 0.3em;
     justify-content: center;
 }
 
+.trusted:hover {
+    color: black;
+    text-shadow: 0px 0px 10px blue;
+}
+
 .happines {
+    cursor: text;
+    display: flex;
+    font-size: 1.3em;
+    margin-top: 3em;
+    letter-spacing: 0.2em;
+    justify-content: center;
+}
+
+.happines:hover {
+    color: black;
+    text-shadow: 0px 0px 10px blue;
+}
+
+#images-and-form-child {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    background-color: #101010;
+    padding: 2em;
+}
+
+.images-slider {
+    width: 880px;
+    height: 500px;
+}
+
+.caption {
+    cursor: text;
+    padding: 0.5em;
+    font-size: 20px;
+    letter-spacing: 0.6em;
+    text-align: center;
+    background-color: blue;
+}
+
+.caption:hover {
+    background-color: red;
+}
+
+.container-parent {
+    padding: 0.6em;
+    background-color: blue;
+}
+
+.container-parent:hover {
+    background-color: red;
+}
+
+.container-child {
+    width: 10px;
+    display: flex;
+    padding: 0em 2em 0 2em;
+}
+
+.user-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 90px;
+}
+
+.user-img:hover {
+    cursor: none;
+    transform: scale(1.1);
+}
+
+.name-user-and-work {
+    padding: 0.5em 2em 0 2em;
+}
+
+.name-user, .work {
+    cursor: text;
+    width: 100px;
+}
+
+.name-user:hover, .work:hover {
+    cursor: text;
+    transform: scale(1.5);
+}
+
+form {
+    color: white;
+    width: 300px;
+    padding: 3em;
+    height: 36em;
+    background-color: #292F33;
+    box-shadow: 0px 0px 5px 5px blue;
+}
+
+form h4 {
+    font-size: 20px;
+    letter-spacing: 5px;
+    margin-bottom: 1.5em;
+    text-align: center;
+    padding: 0.7em;
+    cursor: text;
+    background-color: gray;
+}
+
+form h5 {
+    cursor: text;
+    font-size: 15px;
+    letter-spacing: 2px;
+    margin-bottom: 1.5em;
+    background-color: gray;
+    padding: 0.7em;
+}
+
+form h4:hover, form h5:hover {
+    color: black;
+    background-color: silver;
+}
+
+form p {
+    cursor: text;
+    font-size: 20px;
+}
+
+form input {
+    font-size: 20px;
+    width: 14.5em;
+    font-family: 'Bebas Neue', sans-serif;
+    padding: 0.2em;
+}
+
+.alert {
+    color: red;
+}
+
+form select {
+    font-size: 20px;
+    width: 15.1em;
+    font-family: 'Bebas Neue', sans-serif;
+    padding: 0.2em;
+}
+
+button {
+    width: 15.1em;
+    color: white;
+    padding: 0.2em;
+    font-size: 20px;
+    font-family: 'Bebas Neue', sans-serif;
+    background-color: blue;
+}
+
+button:hover {
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    background-color: green;
+}
+
+#information {
+    padding: 2em;
+    background-color: #101010;
+    background-color: #1d1d1d;
+}
+
+#information h1 {
+    padding: 0.5em;
+    cursor: text;
+    color: white;
+    text-align: center;
+    margin-bottom: 2em;
+    letter-spacing: 0.5em;
+    background-color: blue;
+}
+
+#information h1:hover {
+    background-color: red;
+}
+
+#information h2 {
+    padding: 0.5em;
+    cursor: text;
+    color: white;
+    letter-spacing: 0.2em;
+    background-color: blue;
+}
+
+#information h2:hover {
+    background-color: red;
+}
+
+#information img {
+    cursor: zoom-in;
+    margin: 1em;
+    width: 395px;
+    height: 300px;
+}
+
+#information img:hover {
+    transition: 0.8s;
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px 10px blue;
+}
+
+#our-packages {
+    height: 80vh;
+    background-color: #181818;
+}
+
+#our-packages h1{
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    cursor: text;
+    letter-spacing: 0.6em;
+    padding: 1em;
+    background-color: #101010;
+}
+
+.title-top, .title-bottom {
+    color: white;
+    cursor: text;
+    display: flex;
+    justify-content: space-around;
+    padding: 1em;
+    margin-top: 3em;
+    background-color: blue;
+}
+
+.title-top:hover, .title-bottom:hover {
+    background-color: red;
+}
+
+.caption-top, .caption-bottom {
+    color: white;
+    cursor: text;
+    display: flex;
+    width: 80.7em;
+    justify-content: space-around;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+#closing {
+    padding: 2em;
+    color: white;
+    text-align: center;
+    background-color: #292F33;
+}
+
+#closing h1 {
+    cursor: text;
+}
+
+footer {
+    padding: 2em;
+}
+
+footer h1 {
+    color: white;
+    cursor: text;
+    text-align: center;
+    letter-spacing: 3px;
+    font-family: 'Lobster', sans-serif;
+}
+
+footer div {
     display: flex;
     justify-content: center;
+}
+
+footer h3 {
+    cursor: text;
+    color: white;
+    letter-spacing: 1px;
+}
+
+footer a {
+    cursor: pointer;
+    color: white;
+    letter-spacing: 1px;
+    font-size: 20px;
+}
+
+footer a:hover {
+    font-style: italic;
+    color: greenyellow;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: red;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    body {
+        background-color: green;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    body {
+        background-color: blue;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    body {
+        background-color: yellow;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    body {
+        background-color: black;
+    }
 }
