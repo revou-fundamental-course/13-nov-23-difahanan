@@ -1,0 +1,59 @@
+*, body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+#logo {
+    color: gold;
+    border: 1px solid pink;
+}
+
+nav {
+    display: flex;
+    justify-content: end;
+}
+
+#home {
+    color: red;
+    padding: 0.5em;
+    width: 4.5em;
+    text-align: center;
+    border: 1px solid pink;
+}
+
+#our-package {
+    color: green;
+    padding: 0.5em;
+    border: 1px solid pink;
+}
+
+#call-us {
+    color: blue;
+    padding: 0.5em;
+    width: 4.5em;
+    text-align: center;
+    border: 1px solid pink;
+}
+
+#banner-auto-slide {
+    color: white;
+    height: 90.8vh;
+    background-color: gray;
+}
+
+.trusted {
+    display: flex;
+    margin-bottom: 2em;
+    justify-content: center;
+}
+
+.happines {
+    display: flex;
+    justify-content: center;
+}
